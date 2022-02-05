@@ -1,1 +1,17 @@
+<div style="margin-top: 1rem; margin-bottom: 1rem;">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<hr style="margin-top: 1rem; margin-bottom: 1rem;">
+<a href="#" *ngFor="let recipe of recipes">
+  <mat-card class="recipe-card">
+    <mat-card-title-group>
+      <mat-card-title>{{recipe.name}}</mat-card-title>
+      <mat-card-subtitle>{{recipe.description}}</mat-card-subtitle>
+      <img [src]=recipe.imagePath [alt]=recipe.name>
+    </mat-card-title-group>
+  </mat-card>
+</a>
+
 <app-recipe-item></app-recipe-item>
