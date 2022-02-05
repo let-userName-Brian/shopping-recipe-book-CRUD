@@ -2,6 +2,11 @@
   <div class="col-md-10">
     <app-shopping-edit></app-shopping-edit>
     <hr>
-    <p>The list</p>
+    <mat-selection-list #items>
+      <mat-list-option *ngFor="let item of ingredients">
+        {{item.amount}}
+        {{item.name}}
+      </mat-list-option>
+    </mat-selection-list>
   </div>
 </div>
