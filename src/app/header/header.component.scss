@@ -1,0 +1,36 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar{
+  background-color: black;
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.brand-name{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.add-items{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.add-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15rem;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
