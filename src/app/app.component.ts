@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'food-shopping';
+  @Input() 
+  title: string = 'food-shopping';
+  navigatedLocation:string = "recipe";
+
+
+
+  onNavigate(feature: string) {
+    this.navigatedLocation = feature;
+  }
+
 }

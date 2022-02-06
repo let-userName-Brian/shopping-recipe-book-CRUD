@@ -4,14 +4,10 @@
   </div>
 </div>
 <hr style="margin-top: 1rem; margin-bottom: 1rem;">
-<a href="#" *ngFor="let recipe of recipes">
-  <mat-card class="recipe-card">
-    <mat-card-title-group>
-      <mat-card-title>{{recipe.name}}</mat-card-title>
-      <mat-card-subtitle>{{recipe.description}}</mat-card-subtitle>
-      <img [src]=recipe.imagePath [alt]=recipe.name>
-    </mat-card-title-group>
-  </mat-card>
-</a>
-
-<app-recipe-item></app-recipe-item>
+<div class="row" style="width: 100%">
+  <div class="col-xs-12" style="width: 100%">
+    <app-recipe-item *ngFor="let recipeEl of recipes"
+    [recipe]="recipeEl"
+    (recipeSelected)="onRecipeSelected(recipeEl)"></app-recipe-item>
+  </div>
+</div>
