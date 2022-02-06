@@ -1,12 +1,10 @@
 <app-header (featureSelected)="onNavigate($event)"> </app-header>
 <div class="container">
   <div class="row">
-    <div class="col-md-12" *ngIf="this.navigatedLocation === 'recipe'; else shopping">
-      <app-recipe-main> </app-recipe-main>
+    <div class="col-md-12">
+      <app-recipe-main  *ngIf="this.navigatedLocation === 'recipe'"> </app-recipe-main>
+      <app-shopping-main *ngIf="this.navigatedLocation !== 'recipe'"> </app-shopping-main>
     </div>
-    <ng-template #shopping>
-      <app-shopping-main> </app-shopping-main>
-    </ng-template>
   </div>
 </div>
 
