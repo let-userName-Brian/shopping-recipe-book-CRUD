@@ -19,6 +19,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import { DropdownDirtective } from './shared/dropdown.directive';
 import {MatMenuModule} from '@angular/material/menu';
+import { ShoppingSerivce } from './shopping-main/shopping.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatButtonModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [ShoppingSerivce],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
