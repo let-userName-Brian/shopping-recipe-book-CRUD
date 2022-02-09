@@ -16,7 +16,7 @@ mat-toolbar{
   font-weight: bold;
 }
 
-.add-items{
+#add-items{
   display: flex;
   align-items: center;
   font-size: 15px;
@@ -38,4 +38,13 @@ a{
 .panel{
   background-color: black;
   color: white;
+}
+
+.active{
+  background-color: rgb(1, 105, 15);
+  border-radius: 20px;
+  width: 100%;
+  border-style: solid;
+  border-color: rgb(1, 105, 15);
+  border-width: 5px;
 }

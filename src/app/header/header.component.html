@@ -2,8 +2,8 @@
   <mat-toolbar-row>
     <span class="brand-name"><a href="#">Shopping & Recipe Book</a></span>
     <div class="add-container">
-      <span class="add-items"><a href="#" (click)="onSelect('recipe')">Recipes</a></span>
-      <span class="add-items" style="margin-left: 2rem;"><a href="#" (click)="onSelect('shopping-list')">Shopping
+      <span routerLinkActive="active" id="add-items"><a routerLink="/recipes">Recipes</a></span>
+      <span routerLinkActive="active" id="add-items" style="margin-left: 2rem;"><a routerLink="/shopping">Shopping
           List</a></span>
     </div>
     <span class="example-spacer"></span>

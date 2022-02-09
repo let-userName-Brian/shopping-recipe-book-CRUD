@@ -20,6 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { DropdownDirtective } from './shared/dropdown.directive';
 import {MatMenuModule} from '@angular/material/menu';
 import { ShoppingSerivce } from './shopping-main/shopping.service';
+import { RecipeStartComponent } from './recipe-main/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipe-main/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ShoppingSerivce } from './shopping-main/shopping.service';
     RecipeDetailComponent,
     RecipeItemComponent,
     ShoppingEditComponent,
-    DropdownDirtective
+    DropdownDirtective,
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,

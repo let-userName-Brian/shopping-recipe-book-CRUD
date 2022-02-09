@@ -1,6 +1,7 @@
-<a href="#"
-(click)="onSelected()">
-  <mat-card class="recipe-card">
+<a style="cursor: pointer;"
+[routerLink]="[index]">
+  <mat-card class="recipe-card"
+  routerLinkActive="active">
     <mat-card-title-group>
       <mat-card-title>{{recipe.name}}</mat-card-title>
       <mat-card-subtitle>{{recipe.description}}</mat-card-subtitle>
