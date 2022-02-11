@@ -1,25 +1,23 @@
-
 <div class="row">
   <div class="col-xs-12">
     <img [src]="recipe.imagePath" [alt]="recipe.name" style="max-height: 400px; margin-top: 2rem;">
   </div>
 </div>
-
 <div class="row" style="margin-top: 1rem;">
   <div class="col-xs-12">
     <h1>{{recipe.name}}</h1>
   </div>
 </div>
-
 <div style="margin-top: 1rem;" class="row">
   <div class="col-xs-12">
     <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel class="manage-button" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
         <mat-expansion-panel-header>
-          <mat-panel-title>
-           Manage Recipe
+          <mat-panel-title class="manage-button">
+            Manage Recipe
           </mat-panel-title>
         </mat-expansion-panel-header>
+        <hr style="margin-bottom: .5rem;">
         <ul class="dropdown-list">
           <li>
             <a (click)="onAddToShoppingList()" style="cursor: pointer;">Add to Shopping List</a>
@@ -35,19 +33,18 @@
     </mat-accordion>
   </div>
 </div>
-<div class="row">
-  <div class="col-xs-12">
+<div class="row" id="description">
+  <h3 class="col-xs-12">
     {{recipe.description}}
-  </div>
+  </h3>
 </div>
 <div class="row">
   <div class="col-xs-12">
-   <ul class="list-group">
-     <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
-        <span class="badge">{{ingredient.amount}}</span> - 
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+        <span class="badge">{{ingredient.amount}}</span> -
         {{ingredient.name}}
-     </li>
-   </ul>
+      </li>
+    </ul>
   </div>
 </div>
-

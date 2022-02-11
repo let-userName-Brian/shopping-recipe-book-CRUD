@@ -3,11 +3,29 @@
 }
 
 a{
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 .row{
   display: flex;
   justify-content: center;
+}
+
+.manage-button{
+  background-color: #00C0A3;
+  color: white;
+}
+
+.dropdown-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#description{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

@@ -2,7 +2,7 @@
   flex: 1 1 auto;
 }
 mat-toolbar{
-  background-color: black;
+  background-color: #4B4453;
   color: white;
   height: 50px;
   display: flex;
@@ -41,10 +41,12 @@ a{
 }
 
 .active{
-  background-color: rgb(1, 105, 15);
+  color: black;
+  background-color: #00C0A3;
   border-radius: 20px;
   width: 100%;
   border-style: solid;
-  border-color: rgb(1, 105, 15);
+  border-color: #00C0A3;
   border-width: 5px;
 }
+

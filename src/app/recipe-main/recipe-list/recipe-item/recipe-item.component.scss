@@ -3,18 +3,30 @@ img{
   min-width: 108px; 
 }
 
-.recipe-card{
-  margin-bottom: 1rem;
-  background-color: rgb(197, 194, 194);
-  box-shadow: 0px 0px 5px rgb(1, 105, 15);
-
-}
-
 a{
   text-decoration: none;
 }
 
-.active{
-  background-color: aquamarine;
+.button {
+  text-decoration: none;
   color: black;
+  box-shadow: 0px 0px 5px #845EC2;
+  margin-bottom: 1rem;
+  background-color: #B0A8B9;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.glow-button:hover {
+  color: rgb(10, 10, 10);
+  box-shadow: 0 5px 15px #00C0A3;
+}
+
+.active{
+  background-color: #00C0A3;
+  color: black;
+  box-shadow: 0 5px 15px rgba(12, 31, 0, 0.4);
 }
