@@ -1,0 +1,40 @@
+#field{
+  background-color: grey;
+  color: white;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-left: 5px solid red;
+}
+
+.Dbutton {
+  text-decoration: none;
+  color: white;
+  background: #cc5ca7;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.glow-Dbutton:hover {
+  color: white;
+  box-shadow: 0 5px 15px #845EC2;
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+  margin-left: 1rem;
+  background: #00C0A3;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.glow-button:hover {
+  color: white;
+  box-shadow: 0 5px 15px #845EC2;
+}
