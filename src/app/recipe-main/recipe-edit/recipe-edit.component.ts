@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
+
 
 @Component({
   selector: 'app-recipe-edit',
@@ -76,5 +76,16 @@ export class RecipeEditComponent implements OnInit {
   onSubmit() {
     this.editMode ?
       this.recipeService.updateRecipe(this.id, this.recipeForm.value) : this.recipeService.addRecipe(this.recipeForm.value);
+      //navigate back to the recipe list
+      this.onCancel();
+  }
+  onCancel() {
+    //navigate back to the recipe list
+    this.recipeForm.reset();
+    // this.route.url.subscribe(
+    //   (url) => {
+    //     this.router.navigate(['../'], { relativeTo: this.route })
+    //   }
+    // )
   }
 }
