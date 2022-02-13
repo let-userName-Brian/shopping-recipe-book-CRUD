@@ -23,6 +23,11 @@ export class ShoppingMainComponent implements OnInit, OnDestroy {
     )
   }
 
+  onEdit(id: number) {
+    console.log(id);
+    this.shoppingService.startedEditing.next(id);
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

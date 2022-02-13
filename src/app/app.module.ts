@@ -22,6 +22,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ShoppingSerivce } from './shopping-main/shopping.service';
 import { RecipeStartComponent } from './recipe-main/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipe-main/recipe-edit/recipe-edit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { RecipeEditComponent } from './recipe-main/recipe-edit/recipe-edit.compo
     MatExpansionModule,
     MatListModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ShoppingSerivce],
   bootstrap: [AppComponent]

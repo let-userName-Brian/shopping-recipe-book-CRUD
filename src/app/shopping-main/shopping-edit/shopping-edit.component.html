@@ -1,22 +1,22 @@
 <div class="row">
   <div class="col-sm-12">
-    <form class="form">
+    <form class="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
       <div class="row">
         <div class="col-sm-4 form-group">
           <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" #nameInput>
+          <input type="text" class="form-control" id="name" name="name" ngModel required>
         </div>
         <div class="col-sm-4 form-group">
           <label for="amount">Amount</label>
-          <input type="number" class="form-control" id="amount" #amountInput>
+          <input type="number" class="form-control" id="amount" name="amount" ngModel required [pattern]="'^[1-9]+[0-9]*$'"> <!-- [pattern]="'^[1-9]+[0-9]*$'" is regex for not allowing any negative numbers to be passed -->
         </div>
       </div>
       <div class="row">
         <div class="col-xs-8">
-          <button mat-raised-button class="button glow-button" type="button" 
-          (click)="onAddItem()">Add</button>
-          <button mat-raised-button class="Dbutton glow-Dbutton"  type="button">Delete</button>
-          <button mat-raised-button class="Cbutton glow-Cbutton" type="button">Clear</button>
+          <button mat-raised-button class="button glow-button" type="submit" [disabled]="!f.valid">{{ editMode ? "Update" : "Add"}}</button>
+          <button mat-raised-button class="Dbutton glow-Dbutton"  type="button" (click)="onDelete()" 
+          *ngIf="editMode">Delete Item</button>
+          <button mat-raised-button class="Cbutton glow-Cbutton" type="button" (click)="onClear()">Clear Form</button>
         </div>
       </div>
     </form>
