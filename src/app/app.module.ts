@@ -23,6 +23,7 @@ import { ShoppingSerivce } from './shopping-main/shopping.service';
 import { RecipeStartComponent } from './recipe-main/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipe-main/recipe-edit/recipe-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RecipeService } from './recipe-main/recipe.service';
 
 
 @NgModule({
@@ -53,7 +54,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [ShoppingSerivce],
+  providers: [ShoppingSerivce, RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
