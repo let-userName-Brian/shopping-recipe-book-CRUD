@@ -1,6 +1,32 @@
 #field{
-  background-color: grey;
-  color: white;
+  margin-bottom: 2%;
+}
+
+#container{
+  background-color: #B0A8B9;
+  border-radius: 5px;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+h1{
+  font-style: bold;
+  font-size: 2rem;
+}
+
+hr{
+  border: 1px solid grey;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+label{
+  font-style: italic;
+}
+
+.button-group{
+  display: flex;
+  margin-bottom: 1rem;
 }
 
 input.ng-invalid.ng-touched,
@@ -11,7 +37,10 @@ textarea.ng-invalid.ng-touched {
 .Dbutton {
   text-decoration: none;
   color: white;
+  height: 2rem;
+  width: 4rem;
   background: #cc5ca7;
+  margin-left: 1rem;
   border-radius: 4px;
   font-weight: bold;
   text-transform: uppercase;
@@ -26,7 +55,9 @@ textarea.ng-invalid.ng-touched {
 .button {
   text-decoration: none;
   color: white;
-  margin-left: 1rem;
+  height: 2rem;
+  width: 4rem;
+  //margin-left: 1rem;
   background: #00C0A3;
   border-radius: 4px;
   font-weight: bold;
@@ -35,6 +66,32 @@ textarea.ng-invalid.ng-touched {
 }
 
 .glow-button:hover {
+  color: white;
+  box-shadow: 0 5px 15px #845EC2;
+}
+
+.image-preview{
+  display: flex;
+  justify-content: center;
+}
+
+.Cbutton {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 9rem;
+  background: #00C0A3;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.glow-Cbutton:hover {
   color: white;
   box-shadow: 0 5px 15px #845EC2;
 }
