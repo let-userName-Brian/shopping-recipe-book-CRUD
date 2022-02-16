@@ -33,4 +33,8 @@ export class DataStorageService {
                 })
             )
     }
+
+    deleteRecipe(id: number) {
+        return this.http.delete(`https://recipe-book-43005-default-rtdb.firebaseio.com/recipes/${id}.json`);
+    }
 }
