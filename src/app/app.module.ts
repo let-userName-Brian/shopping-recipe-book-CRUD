@@ -25,6 +25,7 @@ import { RecipeStartComponent } from './recipe-main/recipe-start/recipe-start.co
 import { RecipeEditComponent } from './recipe-main/recipe-edit/recipe-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeService } from './recipe-main/recipe.service';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { RecipeService } from './recipe-main/recipe.service';
     ShoppingEditComponent,
     DropdownDirtective,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
