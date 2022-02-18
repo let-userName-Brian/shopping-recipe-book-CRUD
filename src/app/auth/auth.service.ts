@@ -18,6 +18,7 @@ export interface AuthResponseData {
 @Injectable({ providedIn: "root" })
 export class AuthService {
     user = new Subject<User>();
+    token: string = '';
     constructor(private http: HttpClient) { }
 
     signup(email: string, password: string) {
@@ -62,6 +63,7 @@ export class AuthService {
             expirationDate
         );
         this.user.next(user);
+        this.token = token;
     };
 
     private handleError(errorRes: HttpErrorResponse) {
