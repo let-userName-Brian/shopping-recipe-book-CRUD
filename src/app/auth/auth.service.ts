@@ -33,22 +33,7 @@ export class AuthService {
         if (!userData) {
           return;
         }
-    
-        const loadedUser = new User(
-          userData.email,
-          userData.id,
-          userData._token,
-          new Date(userData._tokenExpirationDate)
-        );
         this.token = userData._token;
-    
-        if (loadedUser.token) {
-          this.user.next(loadedUser);
-          const expirationDuration =
-            new Date(userData._tokenExpirationDate).getTime() -
-            new Date().getTime();
-          this.autoLogout(expirationDuration);
-        }
       }
 
     autoLogout(expirationDuration: number) {

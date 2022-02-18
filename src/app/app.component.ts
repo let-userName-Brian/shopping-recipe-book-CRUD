@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from './auth/auth.service';
 
 @Component({
@@ -7,9 +8,14 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-constructor(private authService: AuthService){ }
+constructor(private authService: AuthService, private router: Router){ }
   ngOnInit(): void {
       this.authService.autoLogin();
-      console.log("token at top level post reload", this.authService.user)
+      if(this.authService.token.length > 2){
+        this.router.navigate(['/recipes']);
+      } else {
+        this.router.navigate(['/login']);
+      }
+
   }
 }
