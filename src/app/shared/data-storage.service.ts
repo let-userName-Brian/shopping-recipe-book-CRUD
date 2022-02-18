@@ -10,11 +10,15 @@ export class DataStorageService {
     constructor(private http: HttpClient, private recipeService: RecipeService, private authService: AuthService) { }
 
     storeRecipes() {
+        let authToken = this.authService.token
         const recipes = this.recipeService.getRecipes();
         this.http
             .put(
                 'https://recipe-book-43005-default-rtdb.firebaseio.com/recipes.json',
-                recipes
+                recipes,
+                {
+                    params: new HttpParams().set("auth", authToken)
+                }
             )
             .subscribe(res => {
                 console.log(res);
@@ -41,6 +45,14 @@ export class DataStorageService {
     }
 
     deleteRecipe(id: number) {
-        return this.http.delete(`https://recipe-book-43005-default-rtdb.firebaseio.com/recipes/${id}.json`);
+        let authToken = this.authService.token
+        return this.http.delete<Recipe[]>(`https://recipe-book-43005-default-rtdb.firebaseio.com/recipes/${id}.json`,
+            {
+                params: new HttpParams().set("auth", authToken)
+            }
+        )
+        .subscribe(res => {
+            console.log(res);
+        });
     }
 }
