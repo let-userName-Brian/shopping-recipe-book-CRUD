@@ -10,7 +10,7 @@
     </div>
     <span class="example-spacer"></span>
     <span>
-      <a id="add-items" *ngIf="isAuthenticated">Logout</a>
+      <a id="add-items" *ngIf="isAuthenticated" (click)="onLogout()">Logout</a>
     </span>
   </mat-toolbar-row>
 </mat-toolbar>

@@ -1,6 +1,7 @@
-import { Component, OnInit, Output, EventEmitter, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,15 +12,21 @@ export class HeaderComponent implements OnInit, OnDestroy {
   @Input('class') panelClass!: string;
   isAuthenticated: boolean = false;
   private userSub!: Subscription
-  constructor(
-    private authService: AuthService
-  ) { }
+  constructor(private authService: AuthService) { }
+
+  onLogout() {
+    this.authService.onLogout();
+    this.isAuthenticated = false;
+  }
 
   ngOnInit(): void {
-    this.userSub = this.authService.user.subscribe(user => {
-     this.isAuthenticated = !!user;
+    if(this.authService.token.length > 2) {
+      this.isAuthenticated = true;
     }
-    );
+
+    this.userSub = this.authService.user.subscribe(user => {
+      this.isAuthenticated = !!user;
+    });
   }
 
   ngOnDestroy() {
