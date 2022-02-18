@@ -5,16 +5,12 @@
       <span routerLinkActive="active" id="add-items" *ngIf="isAuthenticated"><a routerLink="/recipes">Recipes</a></span>
       <span routerLinkActive="active" id="add-items" style="margin-left: 2rem;"><a routerLink="/shopping">Shopping
           List</a></span>
-      <span routerLinkActive="active" id="add-items" style="margin-left: 2rem;" *ngIf="!isAuthenticated"><a routerLink="/login">Login</a></span>
+      <span routerLinkActive="active" id="add-items" style="margin-left: 2rem;" *ngIf="!isAuthenticated"><a
+          routerLink="/login">Login</a></span>
     </div>
     <span class="example-spacer"></span>
     <span>
       <a id="add-items" *ngIf="isAuthenticated">Logout</a>
     </span>
-    <button mat-button [matMenuTriggerFor]="menu" *ngIf="isAuthenticated">Manage<span class="caret"></span></button>
-    <mat-menu #menu="matMenu" [class]="'panel'">
-      <button mat-menu-item (click)="saveData()">Save Data</button>
-      <button mat-menu-item (click)="fetchData()">Fetch Data</button>
-    </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>

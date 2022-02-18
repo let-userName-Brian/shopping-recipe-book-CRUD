@@ -90,10 +90,8 @@ export class RecipeEditComponent implements OnInit {
   onCancel() {
     this.router.navigate(['../'], { relativeTo: this.route });
   }
-
+  
   deleteIngredient(id: number) {
-    this.dataService.deleteRecipe(id);
-    this.storeDataService.storeRecipes();
     (<FormArray>this.recipeForm.get('ingredients')).removeAt(id);
   }
 }

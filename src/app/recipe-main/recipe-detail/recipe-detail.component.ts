@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
+import { DataStorageService } from 'src/app/shared/data-storage.service';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -12,7 +13,12 @@ export class RecipeDetailComponent implements OnInit {
   panelOpenState = false;
   recipe!: Recipe;
   id!: number;
-  constructor(private recipeService: RecipeService, private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    private recipeService: RecipeService, 
+    private route: ActivatedRoute, 
+    private router: Router,
+    private storeDataService: DataStorageService,
+    ) { }
 
 
   onAddToShoppingList(){
@@ -25,6 +31,7 @@ export class RecipeDetailComponent implements OnInit {
 
   onDeleteRecipe() {
     this.recipeService.onDeleteRecipe(this.id);
+    this.storeDataService.deleteRecipe(this.id);
     this.router.navigate(['/recipes']);
   }
   
