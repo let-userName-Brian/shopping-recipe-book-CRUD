@@ -2,9 +2,9 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Subject, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
-import { API_KEY } from "../../environments/environment";
 import { User } from "./user.model";
 import { Router } from '@angular/router';
+import { API_KEY_PROD } from "src/environments/environment.prod";
 
 export interface AuthResponseData {
     kind: string;
@@ -45,7 +45,7 @@ export class AuthService {
 
     signup(email: string, password: string) {
         return this.http.post<AuthResponseData>(
-            `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`,
+            `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY_PROD}`,
             {
                 email: email,
                 password: password,
@@ -61,7 +61,7 @@ export class AuthService {
 
     signin(email: string, password: string) {
         return this.http.post<AuthResponseData>(
-            `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`,
+            `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY_PROD}`,
             {
                 email: email,
                 password: password,
