@@ -25,6 +25,10 @@
     box-shadow: 0 5px 15px #845ec2;
 }
 
+:disabled {
+    opacity: 0.5;
+}
+
 .Dbutton {
     text-decoration: none;
     color: white;

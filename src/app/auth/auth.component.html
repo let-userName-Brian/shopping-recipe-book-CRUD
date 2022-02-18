@@ -1,18 +1,30 @@
-<div class="outer-container"> 
+<div class="outer-container">
     <div class="col-xs-12 col-md-6 col-md-offset" id="custom-css">
-        <form >
+        <h2>{{ isLoginMode ? 'Login' : 'Sign up' }}</h2>
+        <div *ngIf="isLoading" style="text-align: center;">
+            <app-loading-spinner></app-loading-spinner>
+        </div>
+        <div>
+            <div class="alert alert-danger" role="alert" *ngIf="err.length > 2">
+               <p>{{ err }}</p> 
+        </div>
+        <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
             <div class="form-group">
                 <label for="email">Email address</label>
-                <input class="form-control" id="email" type="email">    
+                <input class="form-control" id="email" type="email" ngModel name="email" required email>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input class="form-control" id="password" type="password">    
+                <input class="form-control" id="password" type="password" ngModel name="password" required
+                    minlength="6">
             </div>
             <div class="button-group">
-                <button class="button glow-button" type="submit">Sign Up!</button>
-                <button class="Dbutton glow-Dbutton" type="button">Switch to Login?</button>
+                <button class="button glow-button" type="submit" [disabled]="!authForm.valid">{{ isLoginMode ? 'Login' :
+                    'Sign up' }}</button>
+                <button class="Dbutton glow-Dbutton" type="button" (click)="onSwitchMode()">Switch to {{ headerText
+                    }}?</button>
             </div>
+
         </form>
     </div>
 </div>
