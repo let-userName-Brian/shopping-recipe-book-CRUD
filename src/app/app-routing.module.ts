@@ -21,7 +21,8 @@ const routes: Routes = [
     ]
   },
   { path: 'shopping', component: ShoppingMainComponent },
-  { path: 'login', component: AuthComponent }
+  { path: 'login', component: AuthComponent },
+  { path: '**', redirectTo: '/login' }
 ];
 
 @NgModule({
