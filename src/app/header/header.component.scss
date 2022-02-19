@@ -1,30 +1,57 @@
-//mobile screen size 
 @media screen and (max-width: 900px) {
   mat-toolbar{
     background-color: #4B4453;
     color: white;
     height: 50px;
+    width: min-content;
     display: flex;
-    align-items: center;
-    max-width: 100vw;
-    justify-content: space-between;
+    align-items: left;
     padding-top: 8px;
   }
-}
 
+  .example-spacer{
+    display: none;
+  }
+  
+  .add-container{
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: left;
+
+  }
+
+  mat-toolbar-row{
+    max-width: 100vw;
+  }
+
+  .brand-name{
+    color: #4B4453;
+  }
+
+  .logout{
+    display: none;
+    margin-right: 1.5rem;
+  }
+}
 
 .example-spacer {
   flex: 1 1 auto;
 }
 
 mat-toolbar{
+  margin-left: -1rem;
   background-color: #4B4453;
   color: white;
   height: 50px;
+  width: min-content;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 8px;
+}
+
+mat-toolbar-row{
+  max-width: 100vw;
 }
 
 .brand-name{
@@ -43,7 +70,7 @@ mat-toolbar{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 15rem;
+  margin-left: -4rem;
 }
 
 a{

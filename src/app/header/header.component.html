@@ -1,15 +1,15 @@
-<mat-toolbar class="col-xs-12">
+<mat-toolbar >
   <mat-toolbar-row>
     <span class="brand-name">Shopping & Recipe Book</span>
     <div class="add-container">
       <span routerLinkActive="active" id="add-items" *ngIf="isAuthenticated"><a routerLink="/recipes">Recipes</a></span>
-      <span routerLinkActive="active" id="add-items" style="margin-left: 2rem;"><a routerLink="/shopping">Shopping
+      <span routerLinkActive="active" id="add-items" style="margin-left: 1rem;"><a routerLink="/shopping">Shopping
           List</a></span>
-      <span routerLinkActive="active" id="add-items" style="margin-left: 2rem;" *ngIf="!isAuthenticated"><a
+      <span routerLinkActive="active" id="add-items" style="margin-left: 1rem;" *ngIf="!isAuthenticated"><a
           routerLink="/login">Login</a></span>
     </div>
     <span class="example-spacer"></span>
-    <span>
+    <span class="logout">
       <a id="add-items" *ngIf="isAuthenticated" (click)="onLogout()">Logout</a>
     </span>
   </mat-toolbar-row>
