@@ -64,6 +64,10 @@ textarea.ng-invalid.ng-touched {
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
 }
+.button:disabled {
+  background: grey;
+  color: white
+}
 
 .glow-button:hover {
   color: white;
@@ -94,4 +98,10 @@ textarea.ng-invalid.ng-touched {
 .glow-Cbutton:hover {
   color: white;
   box-shadow: 0 5px 15px #845EC2;
+}
+
+.img-alert{
+  display: flex;
+  justify-content: left;
+  align-items: left;
 }

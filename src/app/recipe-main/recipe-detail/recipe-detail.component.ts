@@ -13,6 +13,7 @@ export class RecipeDetailComponent implements OnInit {
   panelOpenState = false;
   recipe!: Recipe;
   id!: number;
+  addedToShoppingList: boolean = false;
   constructor(
     private recipeService: RecipeService, 
     private route: ActivatedRoute, 
@@ -23,6 +24,10 @@ export class RecipeDetailComponent implements OnInit {
 
   onAddToShoppingList(){
     this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
+    this.addedToShoppingList = true;
+    setTimeout(()=>{
+      this.addedToShoppingList = false;
+    }, 2000);
   }
 
   onEditRecipe() {

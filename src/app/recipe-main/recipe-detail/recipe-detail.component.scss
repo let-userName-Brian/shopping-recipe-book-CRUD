@@ -29,3 +29,19 @@ a{
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+.alert-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #4B4453;
+  border-radius: 20px;
+  margin-top: 1rem;
+  color: #00C0A3;
+}
+
+.alert-message{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
