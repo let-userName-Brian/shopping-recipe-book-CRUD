@@ -27,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeService } from './recipe-main/recipe.service';
 import { AuthComponent } from './auth/auth.component';
 import { LoadingSpinner } from './shared/loading-spinner/loading-spinner.component';
+import { AlertComonent } from './shared/alert/alert.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { LoadingSpinner } from './shared/loading-spinner/loading-spinner.compone
     RecipeStartComponent,
     RecipeEditComponent,
     AuthComponent,
-    LoadingSpinner
+    LoadingSpinner,
+    AlertComonent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,40 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 50;
+}
+
+.alert-box {
+  position: fixed;
+  top: 30vh;
+  left: 30vw;
+  width: 13vw;
+  padding: 16px;
+  z-index: 100;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.26);
+}
+
+.alert-box-button {
+  text-decoration: none;
+  text-align: center;
+  padding: 6px;
+  color: white;
+  height: 2rem;
+  width: 4rem;
+  background: #cc5ca7;
+  margin-left: 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.glow-alert-button:hover {
+  color: white;
+  box-shadow: 0 5px 15px #845ec2;
+}

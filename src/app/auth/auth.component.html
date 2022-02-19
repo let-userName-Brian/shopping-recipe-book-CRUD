@@ -4,10 +4,7 @@
         <div *ngIf="isLoading" style="text-align: center;">
             <app-loading-spinner></app-loading-spinner>
         </div>
-        <div>
-            <div class="alert alert-danger" role="alert" *ngIf="err.length > 2">
-               <p>{{ err }}</p> 
-        </div>
+        <app-alert [message]="err" *ngIf="err.length > 2"></app-alert>
         <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
             <div class="form-group">
                 <label for="email">Email address</label>
